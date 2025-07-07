@@ -86,3 +86,37 @@ body {
     font-size: 70px;
     z-index: 100;
 }
+
+/* MEDIA QUERY */
+
+@media (max-width: 768px) {
+    [tp-flappy] {
+        width: 100vw;
+        height: 100vh;
+        border: none;
+    }
+
+    .passaro {
+        width: 40px;
+        left: calc(50% - 20px);
+    }
+
+    .par-de-barreiras {
+        width: 50px;
+    }
+
+    .barreira .borda {
+        width: 60px;
+        height: 20px;
+    }
+
+    .barreira .corpo {
+        width: 50px;
+    }
+
+    .progresso {
+        font-size: 40px;
+        top: 5px;
+        right: 5px;
+    }
+}

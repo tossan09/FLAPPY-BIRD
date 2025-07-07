@@ -94,6 +94,10 @@ function Passaro(alturaJogo) {
     window.addEventListener('mousedown', () => voando = true)
     window.addEventListener('mouseup', () => voando = false)
 
+    window.addEventListener('touchstart', () => voando = true)
+    window.addEventListener('touchend', () => voando = false)
+
+
     this.animar = () => {
         const novoY = this.getY() + (voando ? 8 : -5)
         const alturaMaxima = alturaJogo - this.elemento.clientHeight
@@ -187,11 +191,14 @@ function FlappyBird() {
                 const reset = () => {
                     window.removeEventListener('click', reset)
                     window.removeEventListener('keydown', reset)
+                    window.removeEventListener('touchstart', reset)
                     location.reload()
                 }
 
                 window.addEventListener('click', reset)
                 window.addEventListener('keydown', reset)
+                window.addEventListener('touchstart', reset)
+
             }
         },20) 
     }
